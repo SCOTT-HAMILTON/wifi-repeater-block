@@ -2,13 +2,14 @@ name: "Deploy to Balena"
 
 on:
   push:
-    tags:
-      - "*.*.*"
+    branches:
+       - master
     paths-ignore:
       - 'docs/**'
+  workflow_dispatch:
 
 env:
-  BALENA_APP: balenalabs/wifi-repeater
+  BALENA_APP: gh_scott_hamilton/wifi-repeater-block
 
 jobs:
   build:
@@ -29,5 +30,5 @@ jobs:
       - name: Deploy to Balena
         uses: balena-io/deploy-to-balena-action@master
         with:
-          balena_token: ${{ secrets.BALENA_API_KEY }}
+          balena_token: ${{ secrets.BALENA_TOKEN }}
           fleet: ${{ env.BALENA_APP }}
