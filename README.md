@@ -1,4 +1,4 @@
-# WiFi Repeater
+# WiFi Repeater (WPA1 unfortunately)
 
 | :exclamation:  This project is just a fork and block translation of balenalab's [wfi-repeater app](https://github.com/balena-labs-projects/wifi-repeater)   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------|
