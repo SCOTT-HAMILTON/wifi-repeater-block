@@ -47,6 +47,8 @@ export const createAccessPoint = async (device: WirelessNetwork): Promise<any> =
       ['802-11-wireless', [
         ['ssid', ['ay', stringToArrayOfBytes(device.ssid)]],
         ['mode', ['s', 'ap']],
+        ['channel', ['u', 2]],
+        ['band', ['s', 'bg']], // Set band to 2.4 GHz
       ]],
       ['802-11-wireless-security', [
         ['key-mgmt', ['s', 'wpa-psk']], // WPA2-PSK only
